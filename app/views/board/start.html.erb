@@ -1,0 +1,87 @@
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f29241402a46cc3"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="main">
+	<div class="head">
+		<div class="title"><a class="test" href="/board">랜덤 밸런스게임</a></div>
+		<aside class="top_side">
+			<nav class ="nav">
+				<a href="/new">새로만들기</a>
+				<a href="">도움말</a>
+			</nav>
+		</aside>
+	</div>
+	
+	<table>
+		<tr>
+			<td class="td_title" colspan="2">
+				<%= @game.title%>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<form id="choice" style="word-break:break-all;" action="/Aclick" method="post">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input name="id" type="hidden" value="<%= @game.id %>">
+					<div class="button_cont" style="word-break:break-all;" align="center">
+						<input class="example_d" style="word-break:break-all;" type="submit" value="<%= @game.A %>">
+					</div>
+				</form>
+			</th>
+			<th>
+				<form id="choice2" action="/Bclick" method="post">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input name="id" type="hidden" value="<%= @game.id %>">
+					<div class="button_cont" align="center">
+						<input class="example_d2" type="submit" value="<%= @game.B %>">
+					</div>
+				</form>
+			</th>
+		</tr>
+		
+		<tr>
+			<td> 
+				<%= @game.Acontent %>
+			</td>
+			<td>
+				<%= @game.Bcontent %>
+			</td>
+		</tr>
+			
+		<tr>
+			<td colspan="2">
+				<form action="/up" method="post" class="float">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input name="id" type="hidden" value="<%= @game.id %>">
+					<%= image_submit_tag("up.png")%>
+				</form>
+				<form action="/down" method="post" class="float">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input name="id" type="hidden" value="<%= @game.id %>">
+					<%= image_submit_tag("down.png")%>
+				</form>
+				<form action="/start" method="post" class="float">
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input class="submitButton" type="submit" value="Submit">
+				</form>
+			</td>
+		</tr>
+	</table>
+		
+	<div class="addthis_inline_share_toolbox"></div>
+	<div id="disqus_thread" class="comment"></div>
+		<script>
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://valance.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+	<noscript>
+		Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+	
+	</div>
+

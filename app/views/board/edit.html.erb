@@ -1,0 +1,15 @@
+<div class="title"><a class="test" href="/board">랜덤 밸런스게임</a>
+<form action="/update" method="post">
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input name="id" value ="<%= @post.id %>" type="hidden">
+	<input name="title" value ="<%= @post.title %>">
+	<input name="A" value ="<%= @post.A %>">
+	<input name="B" value ="<%= @post.B %>">
+	<input name="Acontent" value ="<%= @post.Acontent %>">
+	<input name="Bcontent" value ="<%= @post.Bcontent %>">
+	<input name="Acount" value ="<%= @post.Acount %>">
+	<input name="Bcount" value ="<%= @post.Bcount %>">
+	<input name="thumbsup" value ="<%= @post.thumbsup %>">
+	<input name="thumbsdown" value ="<%= @post.thumbsdown %>">
+	<input type="submit" value = "submit">
+</form>

@@ -1,0 +1,42 @@
+<div class="main">
+	<div class="head">
+		<div class="title"><a class="test" href="/board">랜덤 밸런스게임</a></div>
+		<aside class="top_side">
+					<nav class ="nav">
+						<a href="/new">새로만들기</a>
+						<a href="">도움말</a>
+						<a href="/table">테이블</a>
+						<a></a>
+					</nav>
+		</aside>	
+	</div>
+	<br>
+	<form action="/create" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<table>
+			<tr>
+				<td class="td_title" colspan="2">
+					<input type="text" name="title" value="제목">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<textarea style="text-align:center;" class="example_d" rows="4" cols="14" name="A" form="choice"> 선택지 1</textarea>
+				</th>
+				<th>
+					<input style="text-align:center;" class="example_d2" type="text" value="선택지" name="B">
+				</th>
+			</tr>
+		
+			<tr>
+				<td>
+					<input type="text" name="Acontent" value="설명">
+				</td>
+				<td>
+					<input type="text" name="Acontent" value="설명">
+				</td>
+			</tr>
+	</table>
+				<input class="submitButton" type="submit" value="Submit">
+	</form>
+</div>

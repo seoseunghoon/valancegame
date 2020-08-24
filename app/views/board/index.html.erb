@@ -1,0 +1,36 @@
+
+<%= stylesheet_link_tag "start" %>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f29241402a46cc3"></script>
+<div class="main">
+	<div class="head">
+		<div class="title">
+			<a class="test" href="/board">랜덤 밸런스게임</a>
+		</div>
+		
+		<aside class="top_side">
+			<nav class ="nav">
+				<a href="/new">새로만들기</a>
+				<a href="">도움말</a>
+				<a href="/table">테이블</a>
+			</nav>
+		</aside>	
+	</div>
+	
+	<div class="AD-1">광고칸</div>
+	
+	<form action="/start" method="post">
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  		<table>
+			<td>
+				<input class="example_d3" type="submit" value="start">
+			</td>
+			<td>
+				<label><input type="checkbox" name="tag" value="1"> 1</label>
+      			<label><input type="checkbox" name="tag" value="2"> 2</label>
+			</td>
+		</table>
+	</form>
+	<div class="addthis_inline_share_toolbox"></div>
+	</div>
+
+            

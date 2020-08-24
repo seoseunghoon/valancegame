@@ -1,0 +1,41 @@
+1
+<div class="title"><a class="test" href="/board">랜덤 밸런스게임</a></div>
+<button onclick="thumbsSort()">좋아요 순</button>
+<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction()">Click me</button>
+<div>
+	<% @post.each do |post| %>
+<hr>
+<h3>
+	ID : <%= post.id%>
+</h3>
+<h3>
+	title : <%= post.title %>
+</h3>
+<h3>
+	A : <%= post.A %><br>
+	B : <%= post.B %>
+</h3>
+<h3>
+	Acontent : <%= post.Acontent %><br>
+	Bcontent : <%= post.Bcontent %>
+</h3>
+<h3>
+	Acount : <%= post.Acount %>
+	Bcount : <%= post.Bcount %>
+</h3>
+<h3>
+	thumbsup : <%= post.thumbsup %>
+	thumbsdown : <%= post.thumbsdown %>
+</h3>
+<p><a href="/edit?id=<%= post.id%>">edit</a></p>
+<hr>
+<% end%>
+</div>
+<script>
+	function thumbsSort(){
+		alert('test')
+		@post.order("thumbsup")
+		redirect_to '/table'
+	}
+</script>
